@@ -1,1 +1,1 @@
-# Front-end for Fashion website with a shopping cart
+# Front-end for Web Store
