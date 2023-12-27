@@ -1,0 +1,2 @@
+Start writting logic of website here with pseudo code. 
+Make useState for selectedPage to highlight it in the header with a small dot beneath the text
