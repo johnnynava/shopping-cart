@@ -1,2 +1,4 @@
 Start writting logic of website here with pseudo code. 
 Make useState for selectedPage to highlight it in the header with a small dot beneath the text
+Use Goldoni/Vonique font for pages title (above image and video) and possibly brand title?
+Use Montserrat, opensans or metropolis for rest
