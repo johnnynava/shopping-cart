@@ -1,6 +1,12 @@
-state variables:
+Summary of variables:
+!- [selectedPage, setSelectedPage] = [  , useEffect[] in every component from Content] (App)
+!- Red [shoppingCartArray, setShoppingCartArray] = [ and Checkout, ProductDetail and Checkout] (App)
+!- Ref [shoppingCartNum, setShoppingCartNum] = [   , useEffect[shoppingCartArray] in ProductDetail and Checkout] (App)
+!- Ref totalPrice = needs to be in  and Checkout, needs to be updated alongside shoppingCartNum
+!- [selectedProduct, setSelectedProduct] = [ProductDetail, Home and Checkout and Winter2079Collection] (App)
+
 - USE CONTEXT API
-- selectedPage to highlight it in the header, this state needs to be available in every page (when the component loads, set the state to that of the current Page with useEffect)
+- selectedPage to highlight it in the header, this state needs to be available in every page (when every component loads, set the state to that of the current Page with useEffect)
   Make useState for selectedPage to highlight it in the header with a small dot beneath the text
 (needs to be in every component of the content, in the checkout and ProductDetail set it to "none" so nothing gets highlighted)
 
@@ -19,19 +25,13 @@ this useReducer should only be used where the shopping cart can be edited: Produ
 but also where the products are shown (Checkout and Header)
 
 - Show three products on the main page
-- Make array of products (purses) inside Winter Collection
-- Give every item the following keys:
-  - Name
-  - Image
-  - Price
-  - Color
-This array of products needs to be available in: Home and Winter2079Collection
+- Make array of products (purses) inside Winter2079Collection
 
 - Create useState for selectedProduct and edit the ProductDetail page based on that
 The selectedProduct itself only needs to be available in ProductDetail but it should be able to be edited from:
 Home, Winter2079Collection, Header, Checkout
 
-- Make the shopping cart div on the top right only show three items maximum and clicking on each item should redirect to the product detail page.
+!!!!!x Make the shopping cart div on the top right only show three items maximum and clicking on each item should redirect to the product detail page.
 
 - Make animations for:
 Use Goldoni/Vonique font for pages title (above image and video) and possibly brand title?
@@ -42,3 +42,4 @@ Use Montserrat, opensans or metropolis for rest
   - In the case of the product detail page, make it fade into the right and a bit down
   - Everytime the shoppingcart (list of items) gets updated, make a little effect for the shopping cart
   - When you hover on an item, make it so that it shows the name on a slight black border, that the image gets zoomed a little and the price gets a white background
+-Make alert for when a user tries to add a fourth item of the same item in the product detail page

@@ -1,0 +1,88 @@
+const collectionArray = [
+  {
+    name: "Blue Tibetan Purse",
+    image: "/src/assets/media/bags/blue-tibetan.jpg",
+    price: 899,
+    color: "blue",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Classy Burgundy Bag",
+    image: "/src/assets/media/bags/classy-burgundy.jpeg",
+    price: 475,
+    color: "pink",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Disco Bag",
+    image: "/src/assets/media/bags/disco.jpg",
+    price: 1499,
+    color: "pink",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Elegant Bag",
+    image: "/src/assets/media/bags/elegant.jpeg",
+    price: 1199,
+    color: "black",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Chest Bag",
+    image: "/src/assets/media/bags/chest.jpg",
+    price: 150,
+    color: "gold",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Heterochromia Bag",
+    image: "/src/assets/media/bags/heterochromia.jpg",
+    price: 2599,
+    color: "gold",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Face Purse",
+    image: "/src/assets/media/bags/face.jpeg",
+    price: 678,
+    color: "gold",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Pockets Bag",
+    image: "/src/assets/media/bags/pockets.jpg",
+    price: 299,
+    color: "red",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Red Skin Bag",
+    image: "/src/assets/media/bags/red-skin.jpeg",
+    price: 289,
+    color: "red",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Snow Leopard Bag",
+    image: "/src/assets/media/bags/snow-leopard.jpg",
+    price: 459,
+    color: "black",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Thin Bag",
+    image: "/src/assets/media/bags/thin.jpg",
+    price: 1756,
+    color: "red",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Utility Bag",
+    image: "/src/assets/media/bags/utility.jpg",
+    price: 2100,
+    color: "blue",
+    id: Math.floor(Math.random() * 10000),
+  },
+];
+
+export default collectionArray;
