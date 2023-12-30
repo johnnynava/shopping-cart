@@ -1,8 +1,23 @@
-Make useState for selectedPage to highlight it in the header with a small dot beneath the text
-Use Goldoni/Vonique font for pages title (above image and video) and possibly brand title?
-Use Montserrat, opensans or metropolis for rest
-Header and footer is the same on every single page.
-Use React Router to change from one page to another
+state variables:
+- USE CONTEXT API
+- selectedPage to highlight it in the header, this state needs to be available in every page (when the component loads, set the state to that of the current Page with useEffect)
+  Make useState for selectedPage to highlight it in the header with a small dot beneath the text
+(needs to be in every component of the content, in the checkout and ProductDetail set it to "none" so nothing gets highlighted)
+
+- Create a useRef variable for the number of items in the shopping cart (this should get updated everytime with useReducer)
+  use a useEffect to update the shopping cart number based on the total quantity of everything, do the dependency for the shoppingCart Array.
+  this use effect will have to be everywhere where the shoppingCart can get updated so: ProductDetail page and Checkout
+  the useRef itself will have to be in the Header
+
+
+- Create a useReducer array for the items in the shopping cart
+- Create action in useReducer for: 
+  - adding an item to the cart,
+  - deleting an item from the cart
+  - editing the quantity of an item
+this useReducer should only be used where the shopping cart can be edited: ProductDetail, Checkout
+but also where the products are shown (Checkout and Header)
+
 - Show three products on the main page
 - Make array of products (purses) inside Winter Collection
 - Give every item the following keys:
@@ -10,17 +25,17 @@ Use React Router to change from one page to another
   - Image
   - Price
   - Color
-- Create a useRef variable for the number of items in the shopping cart
-- Create a useReducer array for the items in the shopping cart
-- Create action in useReducer for: 
-  - adding an item to the cart,
-  - deleting an item from the cart
-  - editing the quantity of an item
-- use a useEffect to update the shopping cart number based on the total quantity of everything, do the dependency for the shoppingCart Array.
-- No need to use contextAPI? ()
+This array of products needs to be available in: Home and Winter2079Collection
+
+- Create useState for selectedProduct and edit the ProductDetail page based on that
+The selectedProduct itself only needs to be available in ProductDetail but it should be able to be edited from:
+Home, Winter2079Collection, Header, Checkout
+
 - Make the shopping cart div on the top right only show three items maximum and clicking on each item should redirect to the product detail page.
 
 - Make animations for:
+Use Goldoni/Vonique font for pages title (above image and video) and possibly brand title?
+Use Montserrat, opensans or metropolis for rest
   - When you scroll down the page the header should change from really faded to black
   - When you hover on the header, it should change from faded to black
   - Make every pages principal image fade into the bottom (black/content)
