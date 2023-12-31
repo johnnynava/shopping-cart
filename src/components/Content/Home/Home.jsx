@@ -3,7 +3,6 @@ import { ShopContext } from "../../../App";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
-//should it have the dependency???
 const Home = () => {
   const { setSelectedPage, setSelectedProduct } = useContext(ShopContext);
   useEffect(() => {

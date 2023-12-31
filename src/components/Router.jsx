@@ -4,8 +4,6 @@ import About from "./Content/About/About";
 import Checkout from "./Content/Checkout/Checkout";
 import ProductDetail from "./Content/ProductDetail/ProductDetail";
 import Winter2079Collection from "./Content/Winter2079Collection/Winter2079Collection";
-import { useContext } from "react";
-import { ShopContext } from "../App";
 
 const Router = () => {
   const router = createBrowserRouter([

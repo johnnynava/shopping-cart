@@ -1,35 +1,7 @@
-Summary of variables:
-!- [selectedPage, setSelectedPage] = [  , useEffect[] in every component from Content] (App)
-!- Red [shoppingCartArray, setShoppingCartArray] = [ and Checkout, ProductDetail and Checkout] (App)
-!- Ref [shoppingCartNum, setShoppingCartNum] = [   , useEffect[shoppingCartArray] in ProductDetail and Checkout] (App)
-!- Ref totalPrice = needs to be in  and Checkout, needs to be updated alongside shoppingCartNum
-!- [selectedProduct, setSelectedProduct] = [ProductDetail, and Checkout and Winter2079Collection] (App)
-
-- USE CONTEXT API
-- selectedPage to highlight it in the header, this state needs to be available in every page (when every component loads, set the state to that of the current Page with useEffect)
-  Make useState for selectedPage to highlight it in the header with a small dot beneath the text
-(needs to be in every component of the content, in the checkout and ProductDetail set it to "none" so nothing gets highlighted)
-
-- Create a useRef variable for the number of items in the shopping cart (this should get updated everytime with useReducer)
-  use a useEffect to update the shopping cart number based on the total quantity of everything, do the dependency for the shoppingCart Array.
-  this use effect will have to be everywhere where the shoppingCart can get updated so: ProductDetail page and Checkout
-  the useRef itself will have to be in the Header
-
-
-- Create a useReducer array for the items in the shopping cart
-- Create action in useReducer for: 
-  - adding an item to the cart,
-  - deleting an item from the cart
-  - editing the quantity of an item
-this useReducer should only be used where the shopping cart can be edited: ProductDetail, Checkout
-but also where the products are shown (Checkout and Header)
-
-- Show three products on the main page
-- Make array of products (purses) inside Winter2079Collection
-
-- Create useState for selectedProduct and edit the ProductDetail page based on that
-The selectedProduct itself only needs to be available in ProductDetail but it should be able to be edited from:
-Home, Winter2079Collection, Header, Checkout
+- implement a sort function work in the Winter2079Collection component (to only show certain colors and sort by price)
+- selectedPage to highlight it in the header (small dot below)
+- header!!
+- footer!!!
 
 !!!!!x Make the shopping cart div on the top right only show three items maximum and clicking on each item should redirect to the product detail page.
 
