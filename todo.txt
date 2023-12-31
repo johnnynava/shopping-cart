@@ -1,4 +1,3 @@
-- implement a sort function work in the Winter2079Collection component (to only show certain colors and sort by price)
 - selectedPage to highlight it in the header (small dot below)
 - header!!
 - footer!!!
