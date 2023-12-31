@@ -39,7 +39,7 @@ export const ShopContext = createContext({
   selectedProduct: "",
   setSelectedProduct: () => {},
   shoppingCartNum: 0,
-  totalPrice: 0,
+  subtotal: 0,
   shoppingCartArray: [],
   dispatch: () => {},
 });
@@ -52,7 +52,7 @@ const App = () => {
   const [selectedPage, setSelectedPage] = useState(null);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const shoppingCartNum = useRef(0); // shoppingCartNum.current = shoppingCartNum.current
-  const totalPrice = useRef(0); //totalPrice.current
+  const subtotal = useRef(0); //subtotal.current
   const [state, dispatch] = useReducer(reducer, {
     shoppingCartArray: initialShoppingCartArray,
   });
@@ -69,7 +69,7 @@ const App = () => {
         selectedProduct,
         setSelectedProduct,
         shoppingCartNum,
-        totalPrice,
+        subtotal,
         shoppingCartArray: state.shoppingCartArray,
         dispatch,
       }}

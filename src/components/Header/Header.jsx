@@ -7,7 +7,7 @@ const Header = () => {
     selectedPage,
     shoppingCartArray,
     shoppingCartNum,
-    totalPrice,
+    subtotal,
     setSelectedProduct,
   } = useContext(ShopContext);
 };

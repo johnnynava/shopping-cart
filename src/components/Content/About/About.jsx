@@ -1,6 +1,14 @@
+import { useEffect, useContext } from "react";
+import { ShopContext } from "../../../App";
+
 const About = () => {
+  const { setSelectedPage } = useContext(ShopContext);
+  useEffect(() => {
+    setSelectedPage("about");
+  }, [setSelectedPage]);
+
   return (
-    <div className="content">
+    <div className="contentAbout">
       <img src="/src/assets/media/about.webp"></img>
       <p>About us</p>
       <p>

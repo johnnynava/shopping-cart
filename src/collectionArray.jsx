@@ -1,8 +1,22 @@
 const collectionArray = [
   {
-    name: "Blue Tibetan Purse",
-    image: "/src/assets/media/bags/blue-tibetan.jpg",
-    price: 899,
+    name: "Disco Bag",
+    image: "/src/assets/media/bags/disco.jpg",
+    price: 1499,
+    color: "pink",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Heterochromia Bag",
+    image: "/src/assets/media/bags/heterochromia.jpg",
+    price: 2599,
+    color: "gold",
+    id: Math.floor(Math.random() * 10000),
+  },
+  {
+    name: "Utility Bag",
+    image: "/src/assets/media/bags/utility.jpg",
+    price: 2100,
     color: "blue",
     id: Math.floor(Math.random() * 10000),
   },
@@ -10,13 +24,6 @@ const collectionArray = [
     name: "Classy Burgundy Bag",
     image: "/src/assets/media/bags/classy-burgundy.jpeg",
     price: 475,
-    color: "pink",
-    id: Math.floor(Math.random() * 10000),
-  },
-  {
-    name: "Disco Bag",
-    image: "/src/assets/media/bags/disco.jpg",
-    price: 1499,
     color: "pink",
     id: Math.floor(Math.random() * 10000),
   },
@@ -35,10 +42,10 @@ const collectionArray = [
     id: Math.floor(Math.random() * 10000),
   },
   {
-    name: "Heterochromia Bag",
-    image: "/src/assets/media/bags/heterochromia.jpg",
-    price: 2599,
-    color: "gold",
+    name: "Blue Tibetan Purse",
+    image: "/src/assets/media/bags/blue-tibetan.jpg",
+    price: 899,
+    color: "blue",
     id: Math.floor(Math.random() * 10000),
   },
   {
@@ -74,13 +81,6 @@ const collectionArray = [
     image: "/src/assets/media/bags/thin.jpg",
     price: 1756,
     color: "red",
-    id: Math.floor(Math.random() * 10000),
-  },
-  {
-    name: "Utility Bag",
-    image: "/src/assets/media/bags/utility.jpg",
-    price: 2100,
-    color: "blue",
     id: Math.floor(Math.random() * 10000),
   },
 ];

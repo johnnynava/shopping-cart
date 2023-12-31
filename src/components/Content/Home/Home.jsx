@@ -3,15 +3,15 @@ import { ShopContext } from "../../../App";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 
+//should it have the dependency???
 const Home = () => {
   const { setSelectedPage, setSelectedProduct } = useContext(ShopContext);
-
   useEffect(() => {
     setSelectedPage("/");
   }, [setSelectedPage]);
 
   return (
-    <div className="content">
+    <div className="contentHome">
       <div className="videoContainer">
         <video autoPlay muted loop>
           <source src="/src/assets/media/video.mp4" type="video/mp4"></source>
