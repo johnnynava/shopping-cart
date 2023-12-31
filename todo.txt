@@ -3,7 +3,7 @@ Summary of variables:
 !- Red [shoppingCartArray, setShoppingCartArray] = [ and Checkout, ProductDetail and Checkout] (App)
 !- Ref [shoppingCartNum, setShoppingCartNum] = [   , useEffect[shoppingCartArray] in ProductDetail and Checkout] (App)
 !- Ref totalPrice = needs to be in  and Checkout, needs to be updated alongside shoppingCartNum
-!- [selectedProduct, setSelectedProduct] = [ProductDetail, Home and Checkout and Winter2079Collection] (App)
+!- [selectedProduct, setSelectedProduct] = [ProductDetail, and Checkout and Winter2079Collection] (App)
 
 - USE CONTEXT API
 - selectedPage to highlight it in the header, this state needs to be available in every page (when every component loads, set the state to that of the current Page with useEffect)
