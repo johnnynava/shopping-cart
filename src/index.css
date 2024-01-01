@@ -410,7 +410,7 @@ img {
 
 .footer {
   display: grid;
-  grid-template-rows: 344px 64px 76px;
+  grid-template-rows: 270px 64px 76px;
   padding: 0px 4.85vw;
   padding-top: 40px;
   padding-bottom: 24px;
@@ -420,6 +420,7 @@ img {
 .footerTop {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  border-bottom: 1px solid lightgray;
 }
 
 .footerTopSectionTitle {
