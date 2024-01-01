@@ -10,15 +10,39 @@ const Header = () => {
   const { selectedPage } = useContext(ShopContext);
   const headerDiv = useRef(null);
   const isScrollDown = useRef(false);
+  const brandTitle = useRef(null);
+  const githubLogo = useRef(null);
+  const githubName = useRef(null);
+  const bagLogo = useRef(null);
+  const shoppingCartNumBox = useRef(null);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 95) {
-        headerDiv.current.style.background = "black";
+        console.log(headerDiv.current.style);
+        headerDiv.current.style.background = "white";
+        brandTitle.current.style.color = "black";
+        homeNav.current.style.color = "black";
+        collectionNav.current.style.color = "black";
+        aboutNav.current.style.color = "black";
+        githubName.current.style.color = "black";
+        githubLogo.current.src = "/src/assets/github-black.svg";
+        bagLogo.current.src = "/src/assets/purse-black.svg";
+        shoppingCartNumBox.current.style.color = "black";
+        shoppingCartNumBox.current.style.border = "1px solid black";
         isScrollDown.current = true;
       } else {
         headerDiv.current.style.background =
           "linear-gradient(rgba(0, 0, 0, 0.596),transparent)";
+        brandTitle.current.style.color = "white";
+        homeNav.current.style.color = "white";
+        collectionNav.current.style.color = "white";
+        aboutNav.current.style.color = "white";
+        githubName.current.style.color = "white";
+        githubLogo.current.src = "/src/assets/github-white.svg";
+        bagLogo.current.src = "/src/assets/purse-white.svg";
+        shoppingCartNumBox.current.style.color = "white";
+        shoppingCartNumBox.current.style.border = "1px solid white";
         isScrollDown.current = false;
       }
     });
@@ -49,12 +73,30 @@ const Header = () => {
       className="header"
       ref={headerDiv}
       onMouseOver={() => {
-        headerDiv.current.style.background = "black";
+        headerDiv.current.style.background = "white";
+        brandTitle.current.style.color = "black";
+        homeNav.current.style.color = "black";
+        collectionNav.current.style.color = "black";
+        aboutNav.current.style.color = "black";
+        githubName.current.style.color = "black";
+        githubLogo.current.src = "/src/assets/github-black.svg";
+        bagLogo.current.src = "/src/assets/purse-black.svg";
+        shoppingCartNumBox.current.style.color = "black";
+        shoppingCartNumBox.current.style.border = "1px solid black";
       }}
       onMouseOut={() => {
         if (!isScrollDown.current) {
           headerDiv.current.style.background =
             "linear-gradient(rgba(0, 0, 0, 0.596),transparent)";
+          brandTitle.current.style.color = "white";
+          homeNav.current.style.color = "white";
+          collectionNav.current.style.color = "white";
+          aboutNav.current.style.color = "white";
+          githubName.current.style.color = "white";
+          githubLogo.current.src = "/src/assets/github-white.svg";
+          bagLogo.current.src = "/src/assets/purse-white.svg";
+          shoppingCartNumBox.current.style.color = "white";
+          shoppingCartNumBox.current.style.border = "1px solid white";
         }
       }}
     >
@@ -64,12 +106,12 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/src/assets/github-white.svg"></img>
-          <p>Johnny Nava</p>
+          <img src="/src/assets/github-white.svg" ref={githubLogo}></img>
+          <p ref={githubName}>Johnny Nava</p>
         </a>
       </div>
       <div className="headerMiddle">
-        <p>BRAND</p>
+        <p ref={brandTitle}>BRAND</p>
         <ul className="headerNav">
           <Link to="/">
             <li ref={homeNav}>Home</li>
@@ -83,7 +125,10 @@ const Header = () => {
         </ul>
       </div>
       <div className="headerRight">
-        <ShoppingCart />
+        <ShoppingCart
+          bagLogo={bagLogo}
+          shoppingCartNumBox={shoppingCartNumBox}
+        />
       </div>
     </div>
   );

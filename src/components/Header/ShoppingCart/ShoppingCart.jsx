@@ -3,20 +3,37 @@ import { ShopContext } from "../../../App";
 import { useEffect, useContext, useRef } from "react";
 import { Link } from "react-router-dom";
 
-const ShoppingCart = () => {
-  const { shoppingCartArray, shoppingCartNum, subtotal, setSelectedProduct } =
-    useContext(ShopContext);
+const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
+  const {
+    shoppingCartArray,
+    shoppingCartNum,
+    subtotal,
+    setSelectedProduct,
+    isItemAddedToCart,
+    setIsItemAddedToCart,
+  } = useContext(ShopContext);
   const shoppingBagDiv = useRef(null);
+
+  useEffect(() => {
+    if (isItemAddedToCart) {
+      shoppingBagDiv.current.className = "activeShoppingBag";
+      setIsItemAddedToCart(false);
+    }
+  }, [isItemAddedToCart, setIsItemAddedToCart]);
+
   return (
     <>
       <div className="bagSection">
         <img
           src="/src/assets/purse-white.svg"
+          ref={bagLogo}
           onClick={() => {
             shoppingBagDiv.current.className = "activeShoppingBag";
           }}
         ></img>
-        <div className="shoppingCartNumBox">{shoppingCartNum}</div>
+        <div className="shoppingCartNumBox" ref={shoppingCartNumBox}>
+          {shoppingCartNum}
+        </div>
       </div>
       <div ref={shoppingBagDiv}>
         <div></div>

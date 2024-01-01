@@ -43,6 +43,8 @@ export const ShopContext = createContext({
   setSubtotal: () => {},
   shoppingCartArray: [],
   dispatch: () => {},
+  isItemAddedToCart: false,
+  setIsItemAddedToCart: () => {},
 });
 
 const initialShoppingCartArray = collectionArray.map((item) => {
@@ -57,6 +59,7 @@ const App = () => {
   const [state, dispatch] = useReducer(reducer, {
     shoppingCartArray: initialShoppingCartArray,
   });
+  const [isItemAddedToCart, setIsItemAddedToCart] = useState(false);
 
   return (
     <ShopContext.Provider
@@ -71,6 +74,8 @@ const App = () => {
         setSubtotal,
         shoppingCartArray: state.shoppingCartArray,
         dispatch,
+        isItemAddedToCart,
+        setIsItemAddedToCart,
       }}
     >
       <Router />

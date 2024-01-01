@@ -1,13 +1,6 @@
-!!!!!x Make the shopping cart div on the top right only show three items maximum and overflow:scroll for the rest - clicking on each item should redirect to the product detail page.
-
 - Make animations for:
-Use Goldoni/Vonique font for pages title (above image and video) and possibly brand title?
-Use Montserrat, opensans or metropolis for rest
-  - When you scroll down the page the header should change from really faded to black
-  - When you hover on the header, it should change from faded to black
   - Make every pages principal image fade into the bottom (black/content)
   - In the case of the product detail page, make it fade into the right and a bit down
-  - Everytime the shoppingcart (list of items) gets updated, make a little effect for the shopping cart
   - When you hover on an item, make it so that it shows the name on a slight black border, that the image gets zoomed a little and the price gets a white background
 -Make alert for when a user tries to add a fourth item of the same item in the product detail page
 

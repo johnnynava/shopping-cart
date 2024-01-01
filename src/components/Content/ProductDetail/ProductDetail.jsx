@@ -12,6 +12,7 @@ const ProductDetail = () => {
     setShoppingCartNum,
     setSubtotal,
     selectedProduct,
+    setIsItemAddedToCart,
   } = useContext(ShopContext);
 
   useEffect(() => {
@@ -57,6 +58,7 @@ const ProductDetail = () => {
               <p>{selected.price}</p>
               <button
                 onClick={() => {
+                  setIsItemAddedToCart(true);
                   dispatch({ type: "add", payload: { id: selected.id } });
                 }}
               >

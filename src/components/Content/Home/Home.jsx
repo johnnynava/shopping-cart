@@ -28,7 +28,9 @@ const Home = () => {
             if (index < 3) {
               return (
                 <div className="featured" key={"featured" + index}>
-                  <img src={item.image}></img>
+                  <div>
+                    <img src={item.image}></img>
+                  </div>
                   <p>{item.name}</p>
                   <Link
                     to="product-detail"
@@ -44,8 +46,13 @@ const Home = () => {
           })}
         </div>
         <div className="homeAbout">
-          <img src="/src/assets/media/homeAbout.jpg"></img>
-          <Link to="about">About us</Link>
+          <div>
+            <img src="/src/assets/media/homeAbout.jpg"></img>
+          </div>
+          <div>
+            <p>Learn more about Brand</p>
+            <Link to="about">About us</Link>
+          </div>
         </div>
       </div>
     </>
