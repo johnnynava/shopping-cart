@@ -19,7 +19,6 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       if (window.scrollY >= 95) {
-        console.log(headerDiv.current.style);
         headerDiv.current.style.background = "white";
         brandTitle.current.style.color = "black";
         homeNav.current.style.color = "black";

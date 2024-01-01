@@ -48,14 +48,15 @@ const ProductDetail = () => {
   return collectionArray
     .filter((item) => item.id === selectedProduct)
     .map((selected) => {
+      console.log(selected.image);
       return (
         <>
           <Header />
           <div className="contentProductDetail" key="selectedProduct">
-            <img src={selected.image}></img>
+            <div style={{ backgroundImage: `url(${selected.image})` }}></div>
             <div className="productDetailRight">
               <p>{selected.name}</p>
-              <p>{selected.price}</p>
+              <p>£{selected.price.toLocaleString("en-GB")}.00</p>
               <button
                 onClick={() => {
                   setIsItemAddedToCart(true);
@@ -64,7 +65,6 @@ const ProductDetail = () => {
               >
                 Add to cart
               </button>
-              <Link to="/checkout">GO TO CHECKOUT</Link>
             </div>
           </div>
         </>
