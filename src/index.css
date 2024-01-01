@@ -633,3 +633,12 @@ img {
 .productDetailRight > button:hover {
   cursor: pointer;
 }
+
+.productDetailRight > p:nth-child(4) {
+  color:white;
+  transition: 0.4s;
+}
+
+.productDetailRight > p:nth-child(4).maxQuantityAlertActive {
+  color:red;
+}

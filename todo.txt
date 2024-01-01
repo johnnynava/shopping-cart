@@ -1,9 +1,3 @@
-- Make animations for:
-  - Make every pages principal image fade into the bottom (black/content)
-  - In the case of the product detail page, make it fade into the right and a bit down
-  - When you hover on an item, make it so that it shows the name on a slight black border, that the image gets zoomed a little and the price gets a white background
--Make alert for when a user tries to add a fourth item of the same item in the product detail page
-
 Possible changes for later:
 - Make use of Layout routes so that the Header doesn't need to render inside every content component (I had to do this because of the link references)
 - Make use of :product-name or something like that for the url path of each product in ProductDetail

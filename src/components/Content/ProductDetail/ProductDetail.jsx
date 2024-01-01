@@ -1,7 +1,6 @@
 import collectionArray from "../../../collectionArray";
 import { ShopContext } from "../../../App";
-import { useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useContext, useRef } from "react";
 import Header from "../../Header/Header";
 
 const ProductDetail = () => {
@@ -14,6 +13,8 @@ const ProductDetail = () => {
     selectedProduct,
     setIsItemAddedToCart,
   } = useContext(ShopContext);
+
+  const maxQuantityAlert = useRef(null);
 
   useEffect(() => {
     setSelectedPage("product-detail");
@@ -45,10 +46,17 @@ const ProductDetail = () => {
     );
   }, [shoppingCartArray, setSubtotal]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    maxQuantityAlert.current.className = "";
+  }, []);
+
   return collectionArray
     .filter((item) => item.id === selectedProduct)
     .map((selected) => {
-      console.log(selected.image);
       return (
         <>
           <Header />
@@ -59,12 +67,19 @@ const ProductDetail = () => {
               <p>£{selected.price.toLocaleString("en-GB")}.00</p>
               <button
                 onClick={() => {
-                  setIsItemAddedToCart(true);
+                  shoppingCartArray.filter((item) => item.id === selected.id)[0]
+                    .quantity >= 3
+                    ? (maxQuantityAlert.current.className =
+                        "maxQuantityAlertActive")
+                    : setIsItemAddedToCart(true);
                   dispatch({ type: "add", payload: { id: selected.id } });
                 }}
               >
                 Add to cart
               </button>
+              <p ref={maxQuantityAlert}>
+                You may only purchase up to 3 items of each product
+              </p>
             </div>
           </div>
         </>

@@ -20,6 +20,10 @@ const Winter2079Collection = () => {
     setFilteredColor("All Colours");
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   const Sort = () => {
     return (
       <div className="winter2079CollectionHero">

@@ -8,6 +8,10 @@ const About = () => {
     setSelectedPage("about");
   }, [setSelectedPage]);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <>
       <Header />

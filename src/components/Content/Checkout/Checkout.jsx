@@ -49,6 +49,10 @@ const Checkout = () => {
   }, []);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
     setSelectedPage("checkout");
   }, [setSelectedPage]);
 
