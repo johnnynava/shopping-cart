@@ -70,10 +70,10 @@ const collectionArray = [
     id: Math.floor(Math.random() * 10000),
   },
   {
-    name: "Snow Leopard Bag",
-    image: "/src/assets/media/bags/snow-leopard.jpg",
+    name: "Artisanal Bag",
+    image: "/src/assets/media/bags/artisanal.jpg",
     price: 459,
-    color: "black",
+    color: "gold",
     id: Math.floor(Math.random() * 10000),
   },
   {

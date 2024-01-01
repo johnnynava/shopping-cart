@@ -23,7 +23,6 @@ const Winter2079Collection = () => {
   const Sort = () => {
     return (
       <div className="winter2079CollectionHero">
-        <img src="/src/assets/media/winter-collection.jpg"></img>
         <p>Winter 2079 Collection</p>
         <div className="sortWinter2079Collection">
           <select
@@ -106,7 +105,9 @@ const Winter2079Collection = () => {
                     setSelectedProduct(item.id);
                   }}
                 >
-                  <img src={item.image}></img>
+                  <div className="collectionImageContainer">
+                    <img src={item.image}></img>
+                  </div>
                   <p>{item.name}</p>
                   <p>£{item.price.toLocaleString("en-GB")}.00</p>
                 </Link>
