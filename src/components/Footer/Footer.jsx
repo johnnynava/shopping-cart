@@ -7,7 +7,7 @@ const Footer = () => {
           <p>
             <u>Contact us</u>
           </p>
-          <p>
+          <p className="footerNoCursorPointer">
             Our Client Advisors will be delighted to assist you on{" "}
             <u>07810-XXX-995</u>, <u>email</u> or <u>Whatsapp</u>
           </p>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div className="footerTopSection">
           <p className="footerTopSectionTitle">CONNECT</p>
-          <p>
+          <p className="footerNoCursorPointer">
             <u>Sign up</u> to our newsletter to receive access to our latest
             news, collections and campaigns
           </p>

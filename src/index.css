@@ -441,6 +441,17 @@ img {
   gap: 32px;
 }
 
+.footerBottomRight > p,
+.footerBottomLeft > p > u,
+.footerTopSection > p >u,
+.footerTopSection > p {
+  cursor: pointer
+}
+
+.footerTopSection > .footerNoCursorPointer{
+  cursor: default;
+}
+
 .footerBrandName{
   font-family: "Goldoni";
   font-size: 40px;
