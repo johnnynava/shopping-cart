@@ -2,6 +2,7 @@ import collectionArray from "../../../collectionArray";
 import { ShopContext } from "../../../App";
 import { useEffect, useContext, useRef } from "react";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
   const {
@@ -83,6 +84,11 @@ const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
       </div>
     </>
   );
+};
+
+ShoppingCart.propTypes = {
+  bagLogo: PropTypes.any,
+  shoppingCartNumBox: PropTypes.any,
 };
 
 export default ShoppingCart;

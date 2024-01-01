@@ -5,11 +5,18 @@ import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 import Header from "../../Header/Header";
 
+const Hero = () => {
+  return (
+    <div className="checkoutHero">
+      <p>Shopping Cart</p>
+    </div>
+  );
+};
+
 const Checkout = () => {
   const {
     shoppingCartArray,
     dispatch,
-    shoppingCartNum,
     setShoppingCartNum,
     subtotal,
     setSubtotal,
@@ -56,16 +63,36 @@ const Checkout = () => {
     setSelectedPage("checkout");
   }, [setSelectedPage]);
 
+  const CheckoutRight = () => {
+    return (
+      <div className="checkoutRight">
+        <div>
+          <p>Subtotal: £{subtotal.toLocaleString("en-GB")}.00</p>
+          <p>Shipping: £{subtotal === 0 ? 0 : 15}.00</p>
+          <p>
+            Total: £
+            {subtotal === 0 ? 0 : (subtotal + 15).toLocaleString("en-GB")}
+            .00
+          </p>
+          <button
+            onClick={() => {
+              setIsCheckoutCompleted(true);
+            }}
+          >
+            CHECKOUT
+          </button>
+        </div>
+      </div>
+    );
+  };
+
   if (!isCheckoutCompleted) {
     return (
       <>
         <Header />
-        <div className="contentCheckoutFalse">
-          <div className="checkoutHero">
-            <img src="/src/assets/media/checkout.jpg"></img>
-            <p>Shopping Cart</p>
-          </div>
-          <div className="checkoutLeft">
+        <div className="contentCheckout">
+          <Hero />
+          <div className="checkoutLeftFalse">
             {shoppingCartArray
               .filter((item) => item.quantity > 0)
               .map((item, index) => {
@@ -74,10 +101,12 @@ const Checkout = () => {
                   .map((filteredItem) => {
                     return (
                       <div className="productCheckout" key={"stock" + index}>
-                        <img src={filteredItem.image}></img>
+                        <div>
+                          <img src={filteredItem.image}></img>
+                        </div>
                         <div className="productText">
                           <p>{filteredItem.name}</p>
-                          <div className="productQty&Price">
+                          <div className="productQtyAndPrice">
                             <select
                               value={item.quantity}
                               onChange={(e) => {
@@ -128,24 +157,7 @@ const Checkout = () => {
                   });
               })}
           </div>
-          <div className="checkoutRight">
-            <p>Order Summary</p>
-            <p>Subtotal: £{subtotal.toLocaleString("en-GB")}.00</p>
-            <p>Shipping: £15.00</p>
-            <p>Number of items in cart: {shoppingCartNum}</p>
-            <p>
-              Total: £
-              {subtotal === 0 ? 0 : (subtotal + 15).toLocaleString("en-GB")}
-              .00
-            </p>
-            <button
-              onClick={() => {
-                setIsCheckoutCompleted(true);
-              }}
-            >
-              CHECKOUT
-            </button>
-          </div>
+          <CheckoutRight />
         </div>
       </>
     );
@@ -153,9 +165,15 @@ const Checkout = () => {
     return (
       <>
         <Header />
-        <div className="contentCheckoutTrue">
-          <p>ORDER SUCCESSFUL</p>
-          <p>ORDER ID: #{uuidv4().toUpperCase()}</p>
+        <div className="contentCheckout">
+          <Hero />
+          <div className="checkoutLeftTrue">
+            <div>
+              <p>ORDER SUCCESSFUL</p>
+              <p>ORDER ID: #{uuidv4().toUpperCase()}</p>
+            </div>
+          </div>
+          <CheckoutRight />
         </div>
       </>
     );
