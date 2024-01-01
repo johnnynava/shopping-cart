@@ -1,4 +1,3 @@
-import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Router from "./components/Router";
 import collectionArray from "./collectionArray";
@@ -74,7 +73,6 @@ const App = () => {
         dispatch,
       }}
     >
-      <Header />
       <Router />
       <Footer />
     </ShopContext.Provider>

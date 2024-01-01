@@ -2,6 +2,7 @@ import collectionArray from "../../../collectionArray";
 import { ShopContext } from "../../../App";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
+import Header from "../../Header/Header";
 
 const ProductDetail = () => {
   const {
@@ -47,21 +48,24 @@ const ProductDetail = () => {
     .filter((item) => item.id === selectedProduct)
     .map((selected) => {
       return (
-        <div className="contentProductDetail" key="selectedProduct">
-          <img src={selected.image}></img>
-          <div className="productDetailRight">
-            <p>{selected.name}</p>
-            <p>{selected.price}</p>
-            <button
-              onClick={() => {
-                dispatch({ type: "add", payload: { id: selected.id } });
-              }}
-            >
-              Add to cart
-            </button>
-            <Link to="/checkout">GO TO CHECKOUT</Link>
+        <>
+          <Header />
+          <div className="contentProductDetail" key="selectedProduct">
+            <img src={selected.image}></img>
+            <div className="productDetailRight">
+              <p>{selected.name}</p>
+              <p>{selected.price}</p>
+              <button
+                onClick={() => {
+                  dispatch({ type: "add", payload: { id: selected.id } });
+                }}
+              >
+                Add to cart
+              </button>
+              <Link to="/checkout">GO TO CHECKOUT</Link>
+            </div>
           </div>
-        </div>
+        </>
       );
     });
 };

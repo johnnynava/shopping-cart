@@ -1,3 +1,291 @@
+@font-face {
+  font-family: "Metropolis";
+  src: url("/src/assets/fonts/metropolis.regular.otf");
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("/src/assets/fonts/metropolis.bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("/src/assets/fonts/metropolis.regular-italic.otf");
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Metropolis";
+  src: url("/src/assets/fonts/metropolis.bold-italic.otf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Goldoni";
+  src: url("./assets/fonts/Goldoni.otf");
+}
+
+
 body {
   margin: 0px;
+  font-family: "Metropolis";
+}
+
+video {
+  max-width: 100vw;
+}
+
+.activeNav {
+  text-decoration: underline;
+  text-underline-offset: 7px;
+}
+
+img {
+  width: 50px;
+}
+
+.header {
+  height: 95px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: linear-gradient(rgba(0, 0, 0, 0.596),transparent);
+  position: fixed;
+  width: 100vw;
+  z-index: 9999;
+  transition: 0.4s;
+}
+
+.header:hover {
+  background-color: black;
+}
+
+.headerLeft {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.headerLeft > a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+
+.headerMiddle {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+}
+
+.headerMiddle > .headerNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 30px;
+}
+
+.headerMiddle > ul,
+.headerMiddle > p {
+  margin: 0px;
+  padding: 0px;
+}
+
+.headerMiddle > ul {
+  font-size: 12px;
+  list-style: none;
+}
+
+.headerMiddle > ul > a {
+  text-decoration: none;
+}
+
+.headerMiddle > ul > a > li {
+  color: white;
+}
+
+.headerMiddle > p {
+  font-family: "Goldoni";
+  text-align: center;
+  font-size: 50px;
+  display: grid;
+  align-items: end;
+  color: white;
+}
+
+.headerLeft > a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-left: 63px;
+}
+
+.headerLeft > a > img {
+  height: 15px;
+  width: auto;
+}
+
+.headerRight {
+  display: grid;  
+  align-items: center;
+}
+
+.headerRight > div {
+ display: none;
+}
+
+@keyframes dropup {
+  from{
+    transform: ScaleY(1);
+  }
+  to{
+    transform: ScaleY(0);
+  }
+}
+
+.headerRight > div.activeShoppingBag {
+  display:block;
+  position: absolute;
+  z-index: 10000;
+  top: 65px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  padding: 10px 20px;
+  width: 230px;
+  border-radius: 10px;
+  animation: dropdown 0.3s ease-in-out;
+  transform-origin: top;
+}
+
+@keyframes dropdown {
+  from {
+    transform: ScaleY(0)
+  }
+  to{
+    transform: ScaleY(1)
+  }
+}
+
+.headerRight > div.activeShoppingBag > div:nth-child(1){
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid white;
+  position: absolute;
+  top: -5px;
+  right: 8px;
+  position: absolute;
+}
+
+.shoppingBagDivTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  padding-bottom: 6px;
+}
+
+.shoppingBagCheckout {
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.shoppingBagProducts {
+  min-height: 50px;
+  overflow: scroll;
+  max-height: 300px;
+  border-bottom: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+.shoppingBagProduct {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.shoppingBagProduct:hover {
+  background-color: lightgray;
+}
+
+.shoppingBagProduct > img {
+  width: 50px;
+  height: 75px;
+  border-radius: 5px;
+}
+
+.shoppingBagDivTop > p {
+  margin: 0px;
+}
+
+.shoppingBagProductRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.shoppingBagProductRight > p {
+  margin: 0px;
+  color: black;
+}
+
+.shoppingBagProductRight > p:nth-child(1){
+  font-size: 15px;
+}
+
+.shoppingBagProductRight > p:nth-child(2){
+  font-size: 12px;
+}
+
+.shoppingBagDivTop > p > span {
+  font-size: 11px;
+}
+
+.shoppingBagDivTop > img {
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+}
+
+.headerRight > div.bagSection {
+  display: block;
+  display: flex;
+}
+
+.headerRight > div.bagSection > img {
+  height: 24px;
+  width: auto;
+  cursor: pointer;
+}
+
+.shoppingCartNumBox {
+  position: absolute;
+  right: 68px;
+  top: 30px;
+  border: 1px solid white;
+  border-radius: 250px;
+  padding: 1.3px 2.5px;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+.headerRight {
+  display: flex;
+  justify-content: end;
+  padding-right: 80px;
 }
