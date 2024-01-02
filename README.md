@@ -1,6 +1,6 @@
 # React Web Store
 
-(Live Demo)[https://shopping-cart-sepia-eight.vercel.app/]
+[Live Demo](https://shopping-cart-sepia-eight.vercel.app/)
 
 Web Store I made from scratch using React. 
 
