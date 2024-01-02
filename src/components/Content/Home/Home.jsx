@@ -19,7 +19,7 @@ const Home = () => {
       <Header />
       <div className="contentHome">
         <div className="videoContainer">
-          <video autoPlay muted loop>
+          <video autoPlay muted loop playsInline>
             <source
               src="/src/assets/media/video4.mp4"
               type="video/mp4"

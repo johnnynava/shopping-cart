@@ -1,3 +1,4 @@
-Possible changes for later:
-hiPrio: Make use of Layout routes so that the Header doesn't need to render inside every content component (I had to do this because of the link references)
-midPrio: Make use of :product-name or something like that for the url path of each product in ProductDetail
+Changes I want to do later:
+  hiPrio: Make use of Layout routes so that the Header doesn't need to render inside every content component (I had to do this because of the link references)
+  midPrio: Make use of :product-name or something like that for the url path of each product in ProductDetail
+  midPrio: create tests 
