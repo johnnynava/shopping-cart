@@ -26,7 +26,7 @@ const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
     <>
       <div className="bagSection">
         <img
-          src="/src/assets/purse-white.svg"
+          src="/assets/purse-white.svg"
           ref={bagLogo}
           onClick={() => {
             shoppingBagDiv.current.className = "activeShoppingBag";
@@ -40,7 +40,7 @@ const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
         <div></div>
         <div className="shoppingBagDivTop">
           <img
-            src="/src/assets/close-black.svg"
+            src="/assets/close-black.svg"
             onClick={() => {
               shoppingBagDiv.current.className = "";
             }}

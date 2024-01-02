@@ -20,10 +20,7 @@ const Home = () => {
       <div className="contentHome">
         <div className="videoContainer">
           <video autoPlay muted loop playsInline>
-            <source
-              src="/src/assets/media/video4.mp4"
-              type="video/mp4"
-            ></source>
+            <source src="/assets/media/video4.mp4" type="video/mp4"></source>
           </video>
           <Link to="winter-2079-collection">Winter 2079 Collection</Link>
         </div>
@@ -51,7 +48,7 @@ const Home = () => {
         </div>
         <div className="homeAbout">
           <div>
-            <img src="/src/assets/media/homeAbout.jpg"></img>
+            <img src="/assets/media/homeAbout.jpg"></img>
           </div>
           <div>
             <p>Learn more about Brand</p>

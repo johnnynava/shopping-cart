@@ -25,8 +25,8 @@ const Header = () => {
         collectionNav.current.style.color = "black";
         aboutNav.current.style.color = "black";
         githubName.current.style.color = "black";
-        githubLogo.current.src = "/src/assets/github-black.svg";
-        bagLogo.current.src = "/src/assets/purse-black.svg";
+        githubLogo.current.src = "/assets/github-black.svg";
+        bagLogo.current.src = "/assets/purse-black.svg";
         shoppingCartNumBox.current.style.color = "black";
         shoppingCartNumBox.current.style.border = "1px solid black";
         isScrollDown.current = true;
@@ -38,8 +38,8 @@ const Header = () => {
         collectionNav.current.style.color = "white";
         aboutNav.current.style.color = "white";
         githubName.current.style.color = "white";
-        githubLogo.current.src = "/src/assets/github-white.svg";
-        bagLogo.current.src = "/src/assets/purse-white.svg";
+        githubLogo.current.src = "/assets/github-white.svg";
+        bagLogo.current.src = "/assets/purse-white.svg";
         shoppingCartNumBox.current.style.color = "white";
         shoppingCartNumBox.current.style.border = "1px solid white";
         isScrollDown.current = false;
@@ -78,8 +78,8 @@ const Header = () => {
         collectionNav.current.style.color = "black";
         aboutNav.current.style.color = "black";
         githubName.current.style.color = "black";
-        githubLogo.current.src = "/src/assets/github-black.svg";
-        bagLogo.current.src = "/src/assets/purse-black.svg";
+        githubLogo.current.src = "/assets/github-black.svg";
+        bagLogo.current.src = "/assets/purse-black.svg";
         shoppingCartNumBox.current.style.color = "black";
         shoppingCartNumBox.current.style.border = "1px solid black";
       }}
@@ -92,8 +92,8 @@ const Header = () => {
           collectionNav.current.style.color = "white";
           aboutNav.current.style.color = "white";
           githubName.current.style.color = "white";
-          githubLogo.current.src = "/src/assets/github-white.svg";
-          bagLogo.current.src = "/src/assets/purse-white.svg";
+          githubLogo.current.src = "/assets/github-white.svg";
+          bagLogo.current.src = "/assets/purse-white.svg";
           shoppingCartNumBox.current.style.color = "white";
           shoppingCartNumBox.current.style.border = "1px solid white";
         }
@@ -105,7 +105,7 @@ const Header = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="/src/assets/github-white.svg" ref={githubLogo}></img>
+          <img src="/assets/github-white.svg" ref={githubLogo}></img>
           <p ref={githubName}>Johnny Nava</p>
         </a>
       </div>
