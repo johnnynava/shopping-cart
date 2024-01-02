@@ -4,4 +4,6 @@
 
 Web Store I made from scratch using React. 
 
-Took me a while but I'm really happy with the results.
+I'm really happy with this project!
+
+There are a couple of things I want to change/implement eventually (documented in the todo file)
