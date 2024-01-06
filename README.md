@@ -7,7 +7,7 @@
 
 Fashion Store I made from scratch using React.
 <br>
-You can add/remove items and then checkout.
+You can add/remove items to your shopping bag and then checkout.
 
 ## Primary technologies used
 • React.js
