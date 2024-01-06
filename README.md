@@ -1,4 +1,4 @@
-# React Web Store
+# Fashion Store
 
 [Live Preview](https://shopping-cart-sepia-eight.vercel.app/)
 
