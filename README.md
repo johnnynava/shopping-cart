@@ -2,6 +2,9 @@
 
 [Live Preview](https://shopping-cart-sepia-eight.vercel.app/)
 
+![desktop](https://github.com/johnnynava/shopping-cart/assets/137064281/bdb1807c-9098-4205-9ba6-9324003914d3)
+
+
 Fashion Store I made from scratch using React.
 
 ## Primary technologies used
