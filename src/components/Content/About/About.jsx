@@ -1,6 +1,5 @@
 import { useEffect, useContext } from "react";
 import { ShopContext } from "../../../App";
-import Header from "../../Header/Header";
 
 const About = () => {
   const { setSelectedPage } = useContext(ShopContext);
@@ -14,7 +13,6 @@ const About = () => {
 
   return (
     <>
-      <Header />
       <div className="contentAbout">
         <div>
           <p>About us</p>

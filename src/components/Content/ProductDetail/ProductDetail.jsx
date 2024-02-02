@@ -1,7 +1,6 @@
 import collectionArray from "../../../collectionArray";
 import { ShopContext } from "../../../App";
 import { useEffect, useContext, useRef } from "react";
-import Header from "../../Header/Header";
 
 const ProductDetail = () => {
   const {
@@ -59,7 +58,6 @@ const ProductDetail = () => {
     .map((selected) => {
       return (
         <>
-          <Header />
           <div className="contentProductDetail" key="selectedProduct">
             <div style={{ backgroundImage: `url(${selected.image})` }}></div>
             <div className="productDetailRight">

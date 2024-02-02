@@ -2,7 +2,6 @@ import collectionArray from "../../../collectionArray";
 import { ShopContext } from "../../../App";
 import { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import Header from "../../Header/Header";
 
 const Home = () => {
   const { setSelectedPage, setSelectedProduct } = useContext(ShopContext);
@@ -16,7 +15,6 @@ const Home = () => {
 
   return (
     <>
-      <Header />
       <div className="contentHome">
         <div className="videoContainer">
           <video autoPlay muted loop playsInline>

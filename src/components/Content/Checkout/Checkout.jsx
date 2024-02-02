@@ -3,7 +3,6 @@ import { ShopContext } from "../../../App";
 import { useEffect, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
-import Header from "../../Header/Header";
 
 const Hero = () => {
   return (
@@ -89,7 +88,6 @@ const Checkout = () => {
   if (!isCheckoutCompleted) {
     return (
       <>
-        <Header />
         <div className="contentCheckout">
           <Hero />
           <div className="checkoutLeftFalse">
@@ -164,7 +162,6 @@ const Checkout = () => {
   } else {
     return (
       <>
-        <Header />
         <div className="contentCheckout">
           <Hero />
           <div className="checkoutLeftTrue">

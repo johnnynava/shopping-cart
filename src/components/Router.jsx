@@ -1,4 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layout from "./Layout";
 import Home from "./Content/Home/Home";
 import About from "./Content/About/About";
 import Checkout from "./Content/Checkout/Checkout";
@@ -7,11 +8,16 @@ import Winter2079Collection from "./Content/Winter2079Collection/Winter2079Colle
 
 const Router = () => {
   const router = createBrowserRouter([
-    { path: "/", element: <Home /> },
-    { path: "about", element: <About /> },
-    { path: "checkout", element: <Checkout /> },
-    { path: "product-detail", element: <ProductDetail /> },
-    { path: "winter-2079-collection", element: <Winter2079Collection /> },
+    {
+      element: <Layout />,
+      children: [
+        { path: "/", element: <Home /> },
+        { path: "about", element: <About /> },
+        { path: "checkout", element: <Checkout /> },
+        { path: "product-detail", element: <ProductDetail /> },
+        { path: "winter-2079-collection", element: <Winter2079Collection /> },
+      ],
+    },
   ]);
   return <RouterProvider router={router} />;
 };
