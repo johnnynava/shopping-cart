@@ -14,7 +14,7 @@ const Router = () => {
         { path: "/", element: <Home /> },
         { path: "about", element: <About /> },
         { path: "checkout", element: <Checkout /> },
-        { path: "product-detail", element: <ProductDetail /> },
+        { path: "product-detail/:name", element: <ProductDetail /> },
         { path: "winter-2079-collection", element: <Winter2079Collection /> },
       ],
     },

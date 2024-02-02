@@ -32,7 +32,12 @@ const Home = () => {
                   </div>
                   <p>{item.name}</p>
                   <Link
-                    to="product-detail"
+                    to={
+                      "/product-detail/" +
+                      item.name.toLowerCase().replace(" ", "-") +
+                      "-" +
+                      item.id
+                    }
                     onClick={() => {
                       setSelectedProduct(item.id);
                     }}

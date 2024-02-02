@@ -58,7 +58,12 @@ const ShoppingCart = ({ bagLogo, shoppingCartNumBox }) => {
                 .map((collectItem) => {
                   return (
                     <Link
-                      to="/product-detail"
+                      to={
+                        "/product-detail/" +
+                        collectItem.name.toLowerCase().replace(" ", "-") +
+                        "-" +
+                        collectItem.id
+                      }
                       className="shoppingBagProduct"
                       key={"ShoppingBagProduct" + index}
                       onClick={() => {

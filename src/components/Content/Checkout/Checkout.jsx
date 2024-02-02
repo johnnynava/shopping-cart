@@ -131,7 +131,14 @@ const Checkout = () => {
                           </div>
                           <div className="productButtons">
                             <Link
-                              to="product-detail"
+                              to={
+                                "/product-detail/" +
+                                filteredItem.name
+                                  .toLowerCase()
+                                  .replace(" ", "-") +
+                                "-" +
+                                filteredItem.id
+                              }
                               onClick={() => {
                                 setSelectedProduct(filteredItem.id);
                               }}

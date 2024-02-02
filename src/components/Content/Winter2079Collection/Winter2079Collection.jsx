@@ -102,7 +102,12 @@ const Winter2079Collection = () => {
                 key={"productW2079C" + index}
               >
                 <Link
-                  to="/product-detail"
+                  to={
+                    "/product-detail/" +
+                    item.name.toLowerCase().replace(" ", "-") +
+                    "-" +
+                    item.id
+                  }
                   onClick={() => {
                     setSelectedProduct(item.id);
                   }}
